@@ -1,166 +1,248 @@
 <!DOCTYPE HTML>
 <html lang="zh-TW">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>首頁</title>
-<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="styles/style.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
-<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
-<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>富士通行銷兌點平台</title>
+    <link type="text/css" rel="stylesheet" href="asset/styles/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="asset/styles/style.css">
+    <link type="text/css" rel="stylesheet" href="asset/styles/fujitsu.css">
+    <link type="text/css" rel="stylesheet" href="https:://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap">
+    <link type="text/css" rel="stylesheet" href="asset/fonts/css/fontawesome-all.min.css">
 </head>
-    
+
 <body class="theme-light" data-background="none" data-highlight="red2">
-    
-<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
-    
-<div id="page">
-    
-    <!-- header and footer bar go here-->
-    <div class="header header-fixed header-logo-center">
-        <a href="index.html" class="header-title">Sticky Mobile</a>
-        <a href="#" class="back-button header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
-        <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a>
+    <div id="preloader">
+        <div class="spinner-border color-highlight" role="status"></div>
     </div>
-    <div id="footer-bar" class="footer-bar-1">
-        <a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="index-components.html" class="active-nav"><i class="fa fa-star"></i><span>Features</span></a>
-        <a href="index-pages.html"><i class="fa fa-heart"></i><span>Pages</span></a>
-        <a href="index-search.html"><i class="fa fa-search"></i><span>Search</span></a>
-        <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span></a>
-    </div>
-    
-    <!--start of page content, add your stuff here-->
-    <div class="page-content header-clear-medium">
-
-    </div>    
-    <!--end of page content, off canvas elements here-->
-    
-    <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="345" data-menu-effect="menu-over">
-        <div class="menu-title mt-n1"><h1>Share the Love</h1><p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="content mb-0">
-            <div class="divider mb-0"></div>
-            <div class="list-group list-custom-small list-icon-0">
-                <a href="#" class="shareToFacebook">
-                    <i class="font-18 fab fa-facebook color-facebook"></i>
-                    <span class="font-13">Facebook</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a href="#" class="shareToTwitter">
-                    <i class="font-18 fab fa-twitter-square color-twitter"></i>
-                    <span class="font-13">Twitter</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a href="#" class="shareToLinkedIn">
-                    <i class="font-18 fab fa-linkedin color-linkedin"></i>
-                    <span class="font-13">LinkedIn</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
-                <a href="#" class="shareToWhatsApp">
-                    <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
-                    <span class="font-13">WhatsApp</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>   
-                <a href="#" class="shareToMail border-0">
-                    <i class="font-18 fa fa-envelope-square color-mail"></i>
-                    <span class="font-13">Email</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
+    <div id="page">
+        <div class="header header-fixed header-logo-left">
+            <a href="index.html"><img height="40px" src="asset/images/logo.png" class="header-title" /></a>
+            <a href="#" data-menu="message" class="header-icon header-icon-2"><i class="fas fa-bullhorn"></i></a></a>
+            <a href="#" data-menu="menu-settings" class="header-icon header-icon-1"><i class="fa fa-cog"></i></a>
         </div>
-    </div>
-
-
-    <!-- All Menus, Action Sheets, Modals, Notifications, Toasts get Placed outside the <div class="page-content"> -->
-    <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="300">
-        <div class="menu-title"><h1>Settings</h1><p class="color-highlight">Flexible and Easy to Use</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="divider divider-margins mb-n2"></div>
-        <div class="content">
-            <div class="list-group list-custom-small">
-                <a href="#" data-toggle-theme data-trigger-switch="switch-4" class="pb-2">
-                    <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
-                    <span>Dark Mode</span>
-                    <div class="custom-control scale-switch ios-switch">
-                        <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-4">
-                        <label class="custom-control-label" for="switch-4"></label>
+        <div id="footer-bar" class="footer-bar-1">
+            <a href="index.html" class="active-nav"><i class="fa fa-home"></i><span>首頁</span></a>
+            <a href="chart.html"><i class="fa fa-star"></i><span>排行榜</span></a>
+            <a href="ponit.html"><i class="fa fa-coins"></i><span>新增點數</span></a>
+            <a href="achievement.html"><i class="fa fa-trophy"></i><span>個人成就</span></a>
+            <a href="exchange.html"><i class="fas fa-exchange-alt"></i><span>兌換好康</span></a>
+        </div>
+        <div class="page-content header-clear-medium">
+            <div class="single-slider owl-carousel owl-no-dots mb-0">
+                <div v-for="item in banner" class="card shadow-l" data-card-height="200">
+                    <a :href="item.path">
+                        <div class="card-bottom text-center mb-0">
+                            <h1 class="color-white font-700 mb-n1">{{ item.title }}</h1>
+                            <p class="color-white opacity-80 mb-4">{{ item.desc }}</p>
+                        </div>
+                        <div class="card-overlay bg-gradient"></div>
+                        <img class="img-fluid banner" :src="item.imageUrl">
+                    </a>
+                </div>
+            </div>
+            <div class="card card-style">
+                <div class="content mb-0">
+                    <h1 class="text-left mb-0">產品訊息</h1>
+                    <div class="divider"></div>
+                </div>
+                <div class="stop-slider owl-carousel">
+                    <div v-for="product in proudcts" class="item">
+                        <div data-card-height="180" class="card shadow-l raduis" :style="'background-image: url(' + product.imageUrl + ');'">
+                            <a :href="product.path">
+                                <div class="card-bottom text-center">
+                                    <h5 class="color-white font-900 mb-0">{{ product.name }}</h5>
+                                </div>
+                                <div class="card-overlay bg-gradient"></div>
+                            </a>
+                        </div>
                     </div>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
+                </div>
             </div>
-            <div class="list-group list-custom-large">
-                <a data-menu="menu-highlights" href="#">
-                    <i class="fa font-14 fa-tint bg-green1-dark rounded-s"></i>
-                    <span>Page Highlight</span>
-                    <strong>16 Colors Highlights Included</strong>
-                    <span class="badge bg-highlight color-white">HOT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
-                <a data-menu="menu-backgrounds" href="#" class="border-0">
-                    <i class="fa font-14 fa-cog bg-blue2-dark rounded-s"></i>
-                    <span>Background Color</span>
-                    <strong>10 Page Gradients Included</strong>
-                    <span class="badge bg-highlight color-white">NEW</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
+            <div class="card card-style">
+                <div class="content mb-0">
+                    <h1 class="text-left mb-0">熱門活動</h1>
+                    <div class="divider"></div>
+                </div>
+                <div class="double-slider owl-carousel">
+                    <div v-for="(event, index) in events" class="item">
+                        <div data-card-height="250" class="card rounded-m shadow-l" :style="'background-image: url(' + event.imageUrl + ');'">
+                            <a :href="event.path">
+                                <div class="card-bottom text-center">
+                                    <h3 class="color-white font-900 mb-0">{{ event.title }}</h3>
+                                </div>
+                                <div class="card-overlay bg-gradient"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="footer-copyright">Copyright &copy; Enabled <span id="copyright-year">2017</span>. All Rights Reserved.</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="408">
+            <div class="menu-title">
+                <h1>個人設定</h1>
+                <p class="color-highlight"> &nbsp;</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+                <div class="list-group list-custom-large">
+                    <a data-menu="menu-backgrounds" href="#" class="border-0">
+                        <i class="fa font-14 fa-portrait bg-yellow2-dark rounded-s"></i>
+                        <span>頭像</span>
+                        <strong>平台中呈現之頭像</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a data-menu="menu-backgrounds" href="#" class="border-0">
+                        <i class="fa font-14 fa-camera bg-blue2-dark rounded-s"></i>
+                        <span>暱稱</span>
+                        <strong>平台中呈現之名稱</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a data-menu="menu-highlights" href="#">
+                        <i class="fa font-14 fa-key bg-green1-dark rounded-s"></i>
+                        <span>密碼設定</span>
+                        <strong>修改登入密碼</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-title">
+                <h1>系統設定</h1>
+                <p class="color-highlight"> &nbsp;</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+                <div class="list-group list-custom-large">
+                    <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
+                        <span>夜晚模式</span>
+                        <strong>使用暗色系背景保護眼睛</strong>
+                        <div class="custom-control scale-switch ios-switch">
+                            <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-dark-mode">
+                            <label class="custom-control-label" for="switch-dark-mode"></label>
+                        </div>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="message" class="bg-white menu menu-box-right" data-menu-width="320" data-menu-effect="menu-push">
+            <div class="d-flex">
+                <div class="menu-title flex-grow-1">
+                    <h1 class="font-22 font-700 mb-0">訊息通知</h1>
+                </div>
+                <a href="#" class="close-menu flex-fill icon icon-m color-red2-dark text-right" style="padding-right: 15px"><i class="fa font-12 fa-times"></i></a>
+            </div>
+            <div class="divider"></div>
+            <div class="mr-3 ml-3">
+                <span class="text-uppercase font-900 font-11 opacity-30"></span>
+                <div class="list-groupl">
+                    <div v-for="item in message" class="row mb-3">
+                        <div class="col-12">
+                            <h5 class="text-uppercase font-800 mb-0">{{ item.title }}</h5>
+                            <span>{{ item.desc }}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-    <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="380" data-menu-effect="menu-over">
-        <div class="menu-title"><h1>Highlights</h1><p class="color-highlight">Any Element can have a Highlight Color</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="divider divider-margins mb-n2"></div>
-        <div class="content">
-            <div class="highlight-changer">
-                <a href="#" data-change-highlight="blue2"><i class="fa fa-circle color-blue2-dark"></i><span class="color-blue2-light">Default</span></a>
-                <a href="#" data-change-highlight="red2"><i class="fa fa-circle color-red1-dark"></i><span class="color-red2-light">Red</span></a>    
-                <a href="#" data-change-highlight="orange"><i class="fa fa-circle color-orange-dark"></i><span class="color-orange-light">Orange</span></a>    
-                <a href="#" data-change-highlight="pink2"><i class="fa fa-circle color-pink2-dark"></i><span class="color-pink2-light">Pink</span></a>    
-                <a href="#" data-change-highlight="magenta2"><i class="fa fa-circle color-magenta2-dark"></i><span class="color-magenta2-light">Purple</span></a>    
-                <a href="#" data-change-highlight="aqua"><i class="fa fa-circle color-aqua-dark"></i><span class="color-aqua-light">Aqua</span></a>      
-                <a href="#" data-change-highlight="teal"><i class="fa fa-circle color-teal-dark"></i><span class="color-teal-light">Teal</span></a>      
-                <a href="#" data-change-highlight="mint"><i class="fa fa-circle color-mint-dark"></i><span class="color-mint-light">Mint</span></a>      
-                <a href="#" data-change-highlight="green2"><i class="fa fa-circle color-green2-dark"></i><span class="color-green2-light">Green</span></a>    
-                <a href="#" data-change-highlight="green1"><i class="fa fa-circle color-green1-dark"></i><span class="color-green1-light">Grass</span></a>       
-                <a href="#" data-change-highlight="yellow2"><i class="fa fa-circle color-yellow2-dark"></i><span class="color-yellow2-light">Sunny</span></a>    
-                <a href="#" data-change-highlight="yellow1"><i class="fa fa-circle color-yellow1-dark"></i><span class="color-yellow1-light">Goldish</span></a>
-                <a href="#" data-change-highlight="brown1"><i class="fa fa-circle color-brown1-dark"></i><span class="color-brown1-light">Wood</span></a>    
-                <a href="#" data-change-highlight="dark1"><i class="fa fa-circle color-dark1-dark"></i><span class="color-dark1-light">Night</span></a>
-                <a href="#" data-change-highlight="dark2"><i class="fa fa-circle color-dark2-dark"></i><span class="color-dark2-light">Dark</span></a>
-                <div class="clearfix"></div>
-            </div>
-            <a href="#" data-menu="menu-settings" class="btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
-        </div>
-    </div>    
-    <!-- Menu Settings Backgrounds-->
-    <div id="menu-backgrounds" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="310" data-menu-effect="menu-over">
-        <div class="menu-title"><h1>Backgrounds</h1><p class="color-highlight">Change Page Color Behind Content Boxes</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="divider divider-margins mb-n2"></div>
-        <div class="content">
-            <div class="background-changer">
-                <a href="#" data-change-background="none"><i class="bg-theme"></i><span>Default</span></a>
-                <a href="#" data-change-background="plum"><i class="body-plum"></i><span class="color-plum-dark">Plum</span></a>
-                <a href="#" data-change-background="magenta3"><i class="body-magenta3"></i><span class="color-magenta3-dark">Magenta</span></a>
-                <a href="#" data-change-background="dark3"><i class="body-dark3"></i><span class="color-dark3-dark">Dark</span></a>
-                <a href="#" data-change-background="violet"><i class="body-violet"></i><span class="color-violet-dark">Violet</span></a>
-                <a href="#" data-change-background="red3"><i class="body-red3"></i><span class="color-red3-dark">Red</span></a>
-                <a href="#" data-change-background="green3"><i class="body-green3"></i><span class="color-green3-dark">Green</span></a>
-                <a href="#" data-change-background="sky"><i class="body-sky"></i><span class="color-sky-dark">Sky</span></a>
-                <a href="#" data-change-background="pumpkin"><i class="body-pumpkin"></i><span class="color-pumpkin-dark">Orange</span></a>
-                <a href="#" data-change-background="yellow3"><i class="body-yellow3"></i><span class="color-yellow3-dark">Yellow</span></a>
-                <div class="clearfix"></div>
-            </div>
-            <a href="#" data-menu="menu-settings" class="btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
-        </div>
-    </div>
-</div>    
-
-
-<script type="text/javascript" src="scripts/jquery.js"></script>
-<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="asset/scripts/jquery.js"></script>
+    <script type="text/javascript" src="asset/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="asset/scripts/custom.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+    const vm = Vue.createApp({
+        data() {
+            return {
+                banner: [
+                    {
+                        title: '台灣全家便利商店',
+                        desc: '通過與客戶共創創造新的店面價值',
+                        imageUrl: 'asset/images/banner/fami.jpg',
+                        path: ''
+                    },
+                    {
+                        title: '富士通電子亞太有限公司',
+                        desc: '富士通於9月推出全球最高密度8Mbit ReRAM產品',
+                        imageUrl: 'asset/images/banner/reram.jpg',
+                        path: ''
+                    },
+                    {
+                        title: '富士通株式會社',
+                        desc: 'ScanSnap iX1500 嶄新黑色限量機種 隆重登場',
+                        imageUrl: 'asset/images/banner/newproduct.png',
+                        path: ''
+                    }
+                ],
+                proudcts: [
+                    {
+                        name: '全系列伺服器',
+                        imageUrl: 'asset/images/product/Datacenter-580x224_tcm136-23340.png',
+                        path: ''
+                    },
+                    {
+                        name: 'ETERNUS儲存設備',
+                        imageUrl: 'asset/images/product/580x224_GPS-storage-top_tcm136-2953726.jpg',
+                        path: ''
+                    },
+                    {
+                        name: '用戶端電腦產品',
+                        imageUrl: 'asset/images/product/desktops-notebooks-index-580x224_tcm136-2819467.png',
+                        path: ''
+                    },
+                    {
+                        name: '點矩陣印表機',
+                        imageUrl: 'asset/images/product/printer-family_header580x22_tcm136-896964.png',
+                        path: ''
+                    },
+                    {
+                        name: '掃描器',
+                        imageUrl: 'asset/images/product/bnr_scanner_top_tcm136-3926405.jpg',
+                        path: ''
+                    }
+                ],
+                events: [
+                    {
+                        title: 'Reimagine',
+                        imageUrl: 'asset/images/event/gig5-s-Reimagine_tcm136-5175008_tcm136-2750237-32.jpg',
+                        path: ''
+                    },
+                    {
+                        title: 'FUJITSU Work Life Shift',
+                        imageUrl: 'asset/images/event/gig5-s-WLS_tcm136-5342369_tcm136-2750237-32.jpg',
+                        path: ''
+                    },
+                    {
+                        title: '針對COVID-19採取的措施',
+                        imageUrl: 'asset/images/event/gig5-s-Covid19_tcm136-4939579_tcm136-2750237-32.jpg',
+                        path: ''
+                    }
+                ],
+                message: [
+                    {
+                        title: '台灣全家便利商店',
+                        desc: '通過與客戶共創創造新的店面價值'
+                    },
+                    {
+                        title: '富士通電子亞太有限公司',
+                        desc: '富士通於9月推出全球最高密度8Mbit ReRAM產品'
+                    },
+                    {
+                        title: '富士通株式會社',
+                        desc: 'ScanSnap iX1500 嶄新黑色限量機種 隆重登場'
+                    }
+                ]
+            }
+        }
+    }).mount('#page');
+    </script>
 </body>
