@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-    <title>會員資料設定 | 富士通行銷兌點平台</title>
+    <title>會員認證 | 富士通行銷兌點平台</title>
     <link type="text/css" rel="stylesheet" href="asset/styles/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="asset/styles/style.css">
     <link type="text/css" rel="stylesheet" href="asset/styles/fujitsu.css">
@@ -20,7 +20,7 @@
     </div>
     <div id="page">
         <div class="page-content header-clear-medium">
-            <div v-if="failed" class="alert alert-small rounded-s shadow-xl bg-red2-dark" role="alert">
+            <div v-if="verificationFailed" class="alert alert-small rounded-s shadow-xl bg-red2-dark" role="alert">
                 <span><i class="fa fa-user"></i></span>
                 <strong> error msg </strong>
                 <strong class="float-right font-12 opacity-50">Error</strong>
@@ -28,30 +28,20 @@
             <div class="card card-style">
                 <div class="content mt-4 mb-0">
                     <h1 class="text-center font-900 text-uppercase mb-0">富士通行銷兌點平台</h1>
-                    <p class="bottom-0 text-center color-highlight font-11">限已於台灣富士通xxxxxx註冊之會員</p>
-                    <div class="input-style input-style-2 has-icon input-required">
-                        <i class="input-icon fa fa-user"></i>
-                        <span class="color-highlight input-style-1-active">身分證字號</span>
+                    <p class="bottom-0 text-center color-highlight font-11"> </p>
+                    <div class="input-style has-icon input-style-1 input-required pb-1">
+                        <i class="input-icon fa fa-phone color-theme"></i>
+                        <span>電話</span>
                         <em>(required)</em>
-                        <input type="text" class="form-control" v-model="idNumber">
+                        <input type="phone" placeholder="Phone" v-model="phone">
                     </div>
-                    <div class="input-style input-style-2 has-icon input-required mt-4">
-                        <i class="input-icon fa fa-phone"></i>
-                        <span class="color-highlight input-style-1-active">電話</span>
+                    <div class="input-style has-icon input-style-1 input-required pb-1">
+                        <i class="input-icon fa fa-lock color-theme"></i>
+                        <span>驗證碼</span>
                         <em>(required)</em>
-                        <input type="phone" class="form-control" v-model="phone">
+                        <input type="password" placeholder="Verification" v-model="verification">
                     </div>
-                    <div class="input-style input-style-2 input-required">
-                        <span class="color-highlight input-style-1-active">密碼</span>
-                        <em>(required)</em>
-                        <input type="password" class="form-control" v-model="password">
-                    </div>
-                    <div class="input-style input-style-2 input-required">
-                        <span class="color-highlight input-style-1-active">確認密碼</span>
-                        <em>(required)</em>
-                        <input type="password" class="form-control" v-model="passwordCheck">
-                    </div>
-                    <a href="#" @click="register" class="btn btn-m mt-2 mb-4 btn-full bg-highlight text-uppercase font-900">送出</a>
+                    <a href="#" @click="submitVerification" class="btn btn-m mt-2 mb-4 btn-full bg-highlight text-uppercase font-900">送出</a>
                 </div>
             </div>
         </div>
@@ -64,29 +54,23 @@
     const vm = Vue.createApp({
         data() {
             return {
-                idNumber: null,
                 phone: null,
-                password: null,
-                passwordCheck: null,
-                failed: false
+                verification: null,
+                verificationFailed: false
             }
         },
         methods: {
-            register: function() {
+            submitVerification: function() {
                 this.formVaild();
-                if (!this.failed)
-                {
-                    location.href = 'index.html';
+                if (!this.verificationFailed) {
+                    location.href = 'register.html';
                 }
             },
             formVaild: function() {
-                if ((null !== this.idNumber) && (null !== this.phone) 
-                    && (((null != this.password) && (null !== this.passwordCheck)) && (this.password === this.passwordCheck))
-                    ) {
-                    this.failed = false;
-
+                if (null != this.phone && null !== this.verification) {
+                    this.verificationFailed = false;
                 } else {
-                    this.failed = true;
+                    this.verificationFailed = true;
                 }
             }
         }

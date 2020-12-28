@@ -19,13 +19,10 @@
         <div class="spinner-border color-highlight" role="status"></div>
     </div>
     <div id="page">
-        <div class="header header-fixed header-logo-left">
-            <img height="40px" src="asset/images/logo.png" class="header-title" />
-        </div>
         <div class="page-content header-clear-medium">
             <div v-if="loginFailed" class="alert alert-small rounded-s shadow-xl bg-red2-dark" role="alert">
                 <span><i class="fa fa-user"></i></span>
-                <strong>請確認電話與密碼</strong>
+                <strong> error msg </strong>
                 <strong class="float-right font-12 opacity-50">Error</strong>
             </div>
             <div class="card card-style">
@@ -33,10 +30,10 @@
                     <h1 class="text-center font-900 text-uppercase mb-0">富士通行銷兌點平台</h1>
                     <p class="bottom-0 text-center color-highlight font-11"> </p>
                     <div class="input-style has-icon input-style-1 input-required pb-1">
-                        <i class="input-icon fa fa-phone color-theme"></i>
-                        <span>電話</span>
+                        <i class="input-icon fa fa-user color-theme"></i>
+                        <span>帳號</span>
                         <em>(required)</em>
-                        <input type="phone" placeholder="Phone" v-model="phone">
+                        <input type="text" placeholder="Account" v-model="account">
                     </div>
                     <div class="input-style has-icon input-style-1 input-required pb-1">
                         <i class="input-icon fa fa-lock color-theme"></i>
@@ -47,7 +44,7 @@
                     <a href="#" @click="submitLogin" class="btn btn-m mt-2 mb-4 btn-full bg-highlight text-uppercase font-900">登入</a>
                     <div class="divider mt-4 mb-3"></div>
                     <div class="d-flex">
-                        <div class="w-100 font-11 pb-2 color-theme opacity-60 pb-3 text-center"><a href="register.html" class="color-highlight">首次密碼設定</a></div>
+                        <div class="w-100 font-11 pb-2 color-theme opacity-60 pb-3 text-center"><a href="auth.html" class="color-highlight">首次密碼設定</a></div>
                     </div>
                 </div>
             </div>
