@@ -1378,6 +1378,6 @@ $(document).ready(function(){
             location.appendChild(scriptTag);
         };
         function loadPWA(){}
-        loadJS('scripts/pwa.js', loadPWA, document.body);
+        loadJS('asset/scripts/pwa.js', loadPWA, document.body);
     }    
 }); 
