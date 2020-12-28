@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>首次密碼設定 | 富士通行銷兌點平台</title>
+    <link type="text/css" rel="stylesheet" href="asset/styles/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="asset/styles/style.css">
+    <link type="text/css" rel="stylesheet" href="asset/styles/fujitsu.css">
+    <link type="text/css" rel="stylesheet" href="https:://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap">
+    <link type="text/css" rel="stylesheet" href="asset/fonts/css/fontawesome-all.min.css">
+</head>
+
+<body class="theme-light" data-background="none" data-highlight="red2">
+    <div id="preloader">
+        <div class="spinner-border color-highlight" role="status"></div>
+    </div>
+    <div id="page">
+        <div class="header header-fixed header-logo-left">
+            <img height="40px" src="asset/images/logo.png" class="header-title" />
+        </div>
+        <div class="page-content header-clear-medium">
+            <div v-if="failed" class="alert alert-small rounded-s shadow-xl bg-red2-dark" role="alert">
+                <span><i class="fa fa-user"></i></span>
+                <strong> api return 錯誤訊息 </strong>
+                <strong class="float-right font-12 opacity-50">Error</strong>
+            </div>
+            <div class="card card-style">
+                <div class="content mt-4 mb-0">
+                    <h1 class="text-center font-900 text-uppercase mb-0">富士通行銷兌點平台</h1>
+                    <p class="bottom-0 text-center color-highlight font-11"> 首次密碼設定，限已於台灣富士通xxxxxx註冊之會員 </p>
+                    <div class="input-style input-style-2 has-icon input-required">
+                        <i class="input-icon fa fa-user"></i>
+                        <span class="color-highlight input-style-1-active">身分證字號</span>
+                        <em>(required)</em>
+                        <input type="text" class="form-control" v-model="idNumber">
+                    </div>
+                    <div class="input-style input-style-2 has-icon input-required mt-4">
+                        <i class="input-icon fa fa-phone"></i>
+                        <span class="color-highlight input-style-1-active">電話</span>
+                        <em>(required)</em>
+                        <input type="phone" class="form-control" v-model="phone">
+                    </div>
+                    <div class="input-style input-style-2 input-required">
+                        <span class="color-highlight input-style-1-active">密碼</span>
+                        <em>(required)</em>
+                        <input type="password" class="form-control" v-model="password">
+                    </div>
+                    <div class="input-style input-style-2 input-required">
+                        <span class="color-highlight input-style-1-active">確認密碼</span>
+                        <em>(required)</em>
+                        <input type="password" class="form-control" v-model="passwordCheck">
+                    </div>
+                    <a href="#" @click="register" class="btn btn-m mt-2 mb-4 btn-full bg-highlight text-uppercase font-900">送出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="asset/scripts/jquery.js"></script>
+    <script type="text/javascript" src="asset/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="asset/scripts/custom.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vuelidate/dist/vuelidate.min.js"></script>
+    <script>
+    const vm = Vue.createApp({
+        data() {
+            return {
+                idNumber: null,
+                phone: null,
+                password: null,
+                passwordCheck: null,
+                failed: false
+            }
+        },
+        methods: {
+            register: function() {
+                this.formVaild();
+                if (!this.failed)
+                {
+                    location.href = 'index.html';
+                }
+            },
+            formVaild: function() {
+                if ((null !== this.idNumber) && (null !== this.phone) 
+                    && (((null != this.password) && (null !== this.passwordCheck)) && (this.password === this.passwordCheck))
+                    ) {
+                    this.failed = false;
+
+                } else {
+                    this.failed = true;
+                }
+            }
+        }
+    }).mount('#page');
+    </script>
+</body>
